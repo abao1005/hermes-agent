@@ -6463,7 +6463,7 @@ def _run_setup_command(
 ) -> subprocess.CompletedProcess:
     return subprocess.run(
         command,
-        shell=shell,
+        shell=False,
         executable="/bin/bash" if shell else None,
         env=_memory_provider_setup_env(),
         capture_output=True,
@@ -6623,7 +6623,7 @@ def _install_memory_provider_external_dependencies(
                 install = _run_setup_command(
                     install_cmd,
                     display=install_cmd,
-                    shell=True,
+                    shell=False,
                     timeout=300,
                 )
             except Exception as exc:

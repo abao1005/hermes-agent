@@ -68,7 +68,7 @@ def _mint(command: str, label: str) -> tuple[str, Optional[float]]:
     try:
         completed = subprocess.run(
             command,
-            shell=True,
+            shell=False,
             capture_output=True,
             text=True,
             timeout=_MINT_TIMEOUT_SECONDS,
