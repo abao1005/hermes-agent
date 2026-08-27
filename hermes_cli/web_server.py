@@ -6241,7 +6241,7 @@ def _install_memory_provider_external_dependencies(
                 install = _run_setup_command(
                     install_cmd,
                     display=install_cmd,
-                    shell=True,
+                    shell=False,
                     timeout=300,
                 )
             except Exception as exc:
